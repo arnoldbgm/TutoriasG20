@@ -32,5 +32,12 @@ frutas = ['manzana','platano', "papaya", "granadilla", 'platano']
 # Usamos  =>   len()
 # print(len(frutas))
 # Me dice tambien la longitud de un texto, lista, tupla y set
-texto = 'hola'
-print(len(texto))
+
+# RETO 03
+# De la siguiente Lista
+marcas = ["LG", "SAMSUNG", "APPLE", "NOKIA", "SONY"]
+# Que inserten un elemento a la lista "TOSHIBA"
+# Eliminen el elemento de posicion 2
+# Elimien "APPLE"
+# Que modifiquen NOKIA  =>   "XIAOMI"
+# Que me retornen la longitud de la lista
