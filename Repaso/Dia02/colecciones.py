@@ -120,8 +120,15 @@ superheroes = {
    }
 }
 # Quiero que me muestren el nombre de "Batman"
+print(superheroes.get('nombre'))
+print(superheroes['nombre'])
 # Quiero que me retornen ->  Su nombre real es Bruce Wayne
+print(f"Su nombre real es {superheroes['nombre_real']}")
 # Quiero que me muestren el nombre de "Joker"
+print(superheroes['enemigos'][0])
 # Quiero que me retoren -> Tiene 3 enemigos
-# Quiero que me retornen -> Sus habilidad es el karate
+print(f"Tiene {len(superheroes['enemigos'])} enemigos")
+# Quiero que me retornen -> Su habilidad es el karate
+print(f"Su habilidad es el {superheroes['habilidades']['combate'][0]}")
 # Quiero que me retornen -> El es un Super detective
+print(f"El es un {superheroes['habilidades']['investigacion']['principal']}")
