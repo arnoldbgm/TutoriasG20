@@ -41,3 +41,68 @@ marcas = ["LG", "SAMSUNG", "APPLE", "NOKIA", "SONY"]
 # Elimien "APPLE"
 # Que modifiquen NOKIA  =>   "XIAOMI"
 # Que me retornen la longitud de la lista
+
+
+
+# SET 
+# Es desordenada => no tiene indices o posiciones 
+# Si es editable
+
+# alumnos = {
+#    'Cristhian',
+#    'Jhonny',
+#    'Jhossimar',
+#    'Kevin',
+#    'Miguel',
+#    'Yhulisa',
+#    'Yrvin',
+#    'Yrvin'
+# }
+
+# Agregar un elemento a un set => add
+# alumnos.add('Arnold')
+# # Para eliminar usamos => remove
+# alumnos.remove('Kevin')
+# print(alumnos)
+# alumnos.add('Kevin')
+
+categorias = {
+   'electrodomesticos',
+   'maquillaje',
+   'ropa'
+}
+
+# El  =>   in      me indica si esta o no esta un valor
+# ropa == ropA
+print('ropA' in  categorias)
+
+# Tuplas
+# Son ordenas
+# NO SE PUEDEN EDITAR (ineditable)
+meses = ('Enero', 'Febrero','Diciembre')
+envio = ('Preparando', 'Enviado', 'Entregado')
+
+# Diccionarios | JS => Object
+# Son ordenados PEROOO no utilizan indices 
+# Usamos las LLAVES (KEYS)
+
+persona = {
+   'nombre': 'Arnold',
+   'apellido': 'Gallegos',
+   'genero': 'Masculino',
+   'hobbies': ['Comer', 'Programar', 'Fotografia'],
+   'direccion': {
+      'calle': 'Calle las paltas',
+      'numero': 123
+   },
+   'estado_civil': 'Soltero'
+}
+
+#Si quisieramos acceder al hobbie
+# print(f"El hobbie es {persona['hobbies'][1]}")
+
+# # Para acceder a un diccionario dentro de otro
+# print(f"La calle es {persona['direccion']['calle']}")
+
+# Cuantos hobbies tienes
+print(f"La cantidad de hobbies es {len(persona['hobbies'])}")
