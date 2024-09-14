@@ -105,4 +105,23 @@ persona = {
 # print(f"La calle es {persona['direccion']['calle']}")
 
 # Cuantos hobbies tienes
-print(f"La cantidad de hobbies es {len(persona['hobbies'])}")
+# print(f"La cantidad de hobbies es {len(persona['hobbies'])}")
+
+# RETO 04
+superheroes = {
+   'nombre': 'Batman',
+   'nombre_real': 'Bruce Wayne',
+   'enemigos': ['Joker', 'Red Hat', 'Pinguin'],
+   'habilidades':{
+      'combate': ['karate', 'taekondo'],
+      'investigacion':{
+         'principal': 'Super detective'
+      }
+   }
+}
+# Quiero que me muestren el nombre de "Batman"
+# Quiero que me retornen ->  Su nombre real es Bruce Wayne
+# Quiero que me muestren el nombre de "Joker"
+# Quiero que me retoren -> Tiene 3 enemigos
+# Quiero que me retornen -> Sus habilidad es el karate
+# Quiero que me retornen -> El es un Super detective
