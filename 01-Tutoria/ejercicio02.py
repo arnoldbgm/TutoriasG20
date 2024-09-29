@@ -1,0 +1,17 @@
+notas_clase = [
+    [14, 15, 12, 11, 16], #Juanito
+    [10, 9, 12, 11, 13],  #Marquito
+    [16, 18, 15, 14, 17], #Luchito
+    [8, 11, 10, 9, 7]  #Andres
+]
+
+def promedio_notas_clase(notas_clase):
+   # pass => significa que aqui viene codigo
+   # nota => elemento
+   for nota in notas_clase:
+      # Estamos en elm  [14, 15, 12, 11, 16]
+      # 14 + 15 +12 +11 + 16 / 5
+      promedio = sum(nota) / len(nota)
+      print(f"El promedio del alumno es {promedio}")
+
+promedio_notas_clase(notas_clase)

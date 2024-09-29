@@ -12,7 +12,7 @@ Obtener el nombre y la ciudad de todos los proveedores.
 Obtener el nombre y el precio de todos los productos.
 
 ### Ejercicio 5
-Listar todos los empleados que nacieron después de 1970.
+Listar todos los empleados que nacieron después de 1960.
 
 ### Ejercicio 6
 Obtener todos los productos que cuestan más de 20 unidades monetarias.
