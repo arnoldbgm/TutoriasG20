@@ -5,6 +5,8 @@ notas_clase = [
     [8, 11, 10, 9, 7]  #Andres
 ]
 
+#RETO:> Quiero que me digan cuantos aprobados hay
+# cuantos desaprobados hay (nota para aprobar mayor igual 13)
 def promedio_notas_clase(notas_clase):
    # pass => significa que aqui viene codigo
    # nota => elemento
