@@ -10,10 +10,18 @@ notas_clase = [
 def promedio_notas_clase(notas_clase):
    # pass => significa que aqui viene codigo
    # nota => elemento
+   aprobado = 0
+   desprobado = 0
    for nota in notas_clase:
       # Estamos en elm  [14, 15, 12, 11, 16]
       # 14 + 15 +12 +11 + 16 / 5
       promedio = sum(nota) / len(nota)
       print(f"El promedio del alumno es {promedio}")
+      if promedio >= 13:
+         aprobado += 1
+      else:
+         desprobado+= 1
+   print(f"Aprobados: {aprobado}")
+   print(f"Desaprobados: {desprobado}")
 
 promedio_notas_clase(notas_clase)
