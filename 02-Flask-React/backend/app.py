@@ -7,11 +7,8 @@ from models import (
     post_model
 )
 from router.product_router import product_router
-from flask_cors import CORS
-
 
 app = Flask(__name__)
-CORS(app)
 # Aqui va las credenciales de mi bd
 app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://postgres:root@localhost:5432/db_pos"
 
