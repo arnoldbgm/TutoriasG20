@@ -1,25 +1,36 @@
 import React, { useEffect, useState } from 'react';
 import { HeaderComponent, PostComponent } from '../../components';
+import { fetchPosts } from '../../services/blogService';
 
 const Blog = () => {
   const [posts, setPosts] = useState([]); // Estado para almacenar la lista de posts
 
   useEffect(() => {
-    // Función para obtener los posts del backend
-    const fetchPosts = async () => {
+    // Función comun de como hacer un fetch sin usar un servicio
+    // const fetchPosts = async () => {
+    //   try {
+    //     const response = await fetch('http://127.0.0.1:5000/api/v1/products'); // Cambia esto a la URL de tu API
+    //     if (!response.ok) {
+    //       throw new Error('Error al obtener los datos');
+    //     }
+    //     const data = await response.json();
+    //     setPosts(data); 
+    //   } catch (error) {
+    //     console.error('Error:', error);
+    //   }
+    // };
+
+    // Metodo usando un servicio
+    const getPosts = async () => {
       try {
-        const response = await fetch('https://6700ba024da5bd237554a55d.mockapi.io/blogs'); // Cambia esto a la URL de tu API
-        if (!response.ok) {
-          throw new Error('Error al obtener los datos');
-        }
-        const data = await response.json();
-        setPosts(data); 
+        const data = await fetchPosts();
+        setPosts(data);
       } catch (error) {
-        console.error('Error:', error);
+        console.error('Error fetching posts:', error);
       }
     };
 
-    fetchPosts(); 
+    getPosts();
   }, []);
 
   return (
