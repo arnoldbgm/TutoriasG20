@@ -12,4 +12,17 @@ product_router = Blueprint('product_router', __name__)
 
 @product_router.route('/products', methods=['GET'])
 def get_products():
-    return "Hola mundo"
+    return ([
+        {
+            "fecha": "2024-10-04T20:35:07.804Z",
+            "titulo": "Toby Wolf MD",
+            "contenido": "Beatae laudantium corporis vitae reiciendis nemo tenetur. Voluptatem iusto ipsum. Totam delectus maiores quis. Ducimus hic tempore ex iste modi veniam dicta sequi.",
+            "id": "1"
+        },
+        {
+            "fecha": "2024-10-04T10:52:46.409Z",
+            "titulo": "Lucy Franecki",
+            "contenido": "deserunt omnis fuga",
+            "id": "2"
+        }
+    ])

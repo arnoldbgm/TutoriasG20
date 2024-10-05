@@ -10,5 +10,4 @@ class PostModel(db.Model):
     fecha = Column(DateTime, default=datetime.utcnow)
     titulo = Column(String, nullable=False)
     contenido = Column(Text, nullable=False)
-    categoria_id = Column
-    product_id = Column(Integer, ForeignKey('categorias.id'), nullable=False)
+    categoria_id = Column(Integer, ForeignKey('categorias.id'), nullable=False)
