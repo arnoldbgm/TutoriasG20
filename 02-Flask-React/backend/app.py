@@ -12,7 +12,7 @@ from router.post_router import post_router
 
 
 app = Flask(__name__)
-# Aqui va las credenciales de mi bd
+# Aqui va las credenciales de mi bd                   #usuario:contr@localhost:#puerto/#nombrebd
 app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://postgres:root@localhost:5432/db_pos"
 
 # Aqui le digo que cuanto inicie mi app, que se haga la migracion si es que hay
