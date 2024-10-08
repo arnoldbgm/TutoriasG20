@@ -6,7 +6,10 @@ from models import (
     categoria_model,
     post_model
 )
-from router.product_router import product_router
+from router.categoria_router import categoria_router
+# Estoy importando el post router
+from router.post_router import post_router
+
 
 app = Flask(__name__)
 # Aqui va las credenciales de mi bd
@@ -17,7 +20,8 @@ db.init_app(app)
 migrate = Migrate(app, db)
 
 # Aqui es donde voy a crear mi ruta
-app.register_blueprint(product_router, url_prefix='/api/v1')
+app.register_blueprint(categoria_router, url_prefix='/api/v1')
+app.register_blueprint(post_router, url_prefix='/api/v1')
 
 if __name__ == '__main__':
     app.run(debug=True)

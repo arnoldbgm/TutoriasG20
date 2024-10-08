@@ -7,10 +7,10 @@ from settings.db import db
 
 from sqlalchemy import func  # Esto se usa para el uso de funciones especificas de SQL
 
-product_router = Blueprint('product_router', __name__)
+categoria_router = Blueprint('categoria_router', __name__)
 
 
-@product_router.route('/products', methods=['GET'])
+@categoria_router.route('/products', methods=['GET'])
 def get_products():
     return ([
         {
