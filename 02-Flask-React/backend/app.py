@@ -1,6 +1,7 @@
 from flask import Flask
 from settings.db import db 
 from flask_migrate import Migrate
+from flask_cors import CORS
 # Para que te reconzca la bd debes de importarlo de esta forma 🐍
 from models import (
     categoria_model,
@@ -12,6 +13,7 @@ from router.post_router import post_router
 
 
 app = Flask(__name__)
+CORS(app)
 # Aqui va las credenciales de mi bd                   #usuario:contr@localhost:#puerto/#nombrebd
 app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://postgres:root@localhost:5432/db_pos"
 
