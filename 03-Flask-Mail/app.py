@@ -2,7 +2,6 @@ from flask import Flask
 from settings.db import db
 from flask_migrate import Migrate
 from flask_mail import Mail
-from router.usuarios_router import usuario_router
 
 app = Flask(__name__)
 
@@ -25,7 +24,6 @@ migrate = Migrate(app, db)
 mail = Mail(app)  # Inicializa Flask-Mail
 
 # Registrar blueprints
-app.register_blueprint(usuario_router, url_prefix='/api/v1')
 
 if __name__ == '__main__':
     app.run(debug=True)
