@@ -7,15 +7,15 @@ from router.usuarios_router import usuario_router
 app = Flask(__name__)
 
 # Configuración de la base de datos
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://postgres:SIIyxmsFOmnnanyqvCCutMFfWHYtVWlv@junction.proxy.rlwy.net:54012/railway"
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://postgres:mxhCaUqODasYDGdpZbuTyytktgtxIGXG@junction.proxy.rlwy.net:29578/railway"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 # Configuración de Flask-Mail
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
-app.config['MAIL_USERNAME'] = '-------'
-app.config['MAIL_PASSWORD'] = '----'
-app.config['MAIL_DEFAULT_SENDER'] = '-------'
+app.config['MAIL_USERNAME'] = 'arnold.gallegosm@gmail.com'
+app.config['MAIL_PASSWORD'] = 'atwy xgbe vpwt xfal'
+app.config['MAIL_DEFAULT_SENDER'] = 'arnold.gallegosm@gmail.com'
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
 

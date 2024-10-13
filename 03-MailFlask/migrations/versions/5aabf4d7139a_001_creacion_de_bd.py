@@ -1,8 +1,8 @@
-"""0041-Creacion de BD
+"""001-Creacion de BD
 
-Revision ID: 7e4cba0cffcb
+Revision ID: 5aabf4d7139a
 Revises: 
-Create Date: 2024-10-13 09:34:16.961739
+Create Date: 2024-10-13 09:54:51.709771
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '7e4cba0cffcb'
+revision = '5aabf4d7139a'
 down_revision = None
 branch_labels = None
 depends_on = None
