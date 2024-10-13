@@ -48,6 +48,9 @@ Este proyecto Flask está configurado para enviar correos electrónicos utilizan
    pip install -r requirements.txt
    ```
 
+## Modelado de la siguiente Base de Datos 
+![image](https://github.com/user-attachments/assets/67f928d6-75be-4dc6-88f6-17d7bd6f557f)
+
 ## Configuración de Flask-Mail
 
 1. **Configuración en `app.py`**:
