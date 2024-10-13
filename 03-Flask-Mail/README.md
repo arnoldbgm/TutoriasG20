@@ -52,7 +52,7 @@ Este proyecto Flask está configurado para enviar correos electrónicos utilizan
 
 1. **Configuración en `app.py`**:
 
-   Asegúrate de que `app.py` esté configurado para usar Flask-Mail. Aquí está la configuración básica:
+   Asegúrate de que `app.py` esté configurado para usar Flask-Mail. Aquí está la configuración básica (🦾Dentro de GOOGLE debemos de entrar a aplicaciones):
 
    ```python
    from flask import Flask
