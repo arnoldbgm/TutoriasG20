@@ -48,38 +48,11 @@ Este proyecto Flask está configurado para enviar correos electrónicos utilizan
    pip install -r requirements.txt
    ```
 
-## Modelado de la siguiente Base de Datos 
-![image](https://github.com/user-attachments/assets/67f928d6-75be-4dc6-88f6-17d7bd6f557f)
-
-Vamos a continuacion  a crear las migraciones  🚀
-- **Crear la carpeta `migrations` (Solo la primera vez)**:
-    
-    ```bash
-    flask db init
-    
-    ```
-    
-- **Crear la migración (Cada vez que se modifique el modelo)**:
-    
-    ```bash
-    flask db migrate -m "0001-Creacion de BD"
-    
-    ```
-    
-- **Aplicar la migración (Cada vez que se modifique el modelo)**:
-    
-    ```bash
-    flask db upgrade
-    
-    ```
-    
-
-
 ## Configuración de Flask-Mail
 
 1. **Configuración en `app.py`**:
 
-   Asegúrate de que `app.py` esté configurado para usar Flask-Mail. Aquí está la configuración básica (🦾Dentro de GOOGLE debemos de entrar a aplicaciones):
+   Asegúrate de que `app.py` esté configurado para usar Flask-Mail. Aquí está la configuración básica:
 
    ```python
    from flask import Flask

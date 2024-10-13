@@ -9,4 +9,4 @@ class CategoriasModel(db.Model):
 
         #Column(tipo)
     id = Column(Integer, primary_key=True)
-    nombre = Column(String(255), nullable=False)
+    nombres = Column(String(255), nullable=False)
