@@ -89,6 +89,25 @@ if __name__ == '__main__':
 ### 8. Creacion de la base de datos
 ![image](https://github.com/user-attachments/assets/f69a535b-f8f1-4c3b-a065-4b8f518a9f85)
 
+### 9. Crearemos  el archivo `models/posts_model.py` 📂
+Aqui vamos a crear la tabla posts
+
+```py
+# Esta es la instancia de mi SQLAlchemy
+from settings.db import db
+from sqlalchemy import Column, Integer, String, Text, DateTime
+
+class PostModel(db.Model):
+   # __table__ sirve para nombrar nuestra tabla
+   __tablename__ = 'posts'
+
+   # Column(TipodelDato, opciones)
+   id = Column(Integer, primary_key=True)
+   titulo = Column(String(255))
+   contenido = Column(Text)
+   fecha = Column(DateTime)
+```
+
 ### 9. Ejecutar la migración 🚀
 
 - **Crear la carpeta `migrations` (Solo la primera vez)**:
