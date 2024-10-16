@@ -1,7 +1,7 @@
 // Obtener todos los posts
 export const fetchPosts = async () => {
    try {
-     const response = await fetch('http://127.0.0.1:5000/api/v1/get-posts');
+     const response = await fetch('http://127.0.0.1:5000/api/v1/listar-post');
      if (!response.ok) {
        throw new Error('Error al obtener los datos');
      }
