@@ -23,7 +23,7 @@ python -m venv venv
 ### 3. Instalar Flask y todo lo del proyecto 🛠️
 
 ```bash
-pip install -r requirements.txt
+pip install Flask
 ```
 
 ### 4. Crear un archivo `app.py` 📄
@@ -48,8 +48,20 @@ if __name__ == '__main__':
 python app.py
 
 ```
+### 6. Crearemos las carpetas
+A continuacion crearemos las carpetas `controllers` `router` `settings` `models` 📂
 
-### 6. Crear el archivo `db.py` 📂
+### 7. Instalacion de SQLAlchemy, PsyCop
+Esto me permitira conectarme a mi bd y crear tablas
+
+```bash
+pip install Flask-SQLAlchemy
+```
+```bash
+pip install psycopg2
+```
+
+### 8. Crear el archivo `settings/db.py` 📂
 
 ```python
 from flask_sqlalchemy import SQLAlchemy
@@ -62,24 +74,12 @@ db = SQLAlchemy()
 
 ```python
 from flask import Flask
-from db import db
-from sqlalchemy import Column, Integer, String
-from flask_migrate import Migrate
+from settings.db import db
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'Aqui_va_tu_bd'
 
 db.init_app(app)
-migrate = Migrate(app, db)
-
-class Movies(db.Model):
-    __tablename__ = 'movies'
-
-    id = Column(Integer, primary_key=True)
-    title = Column(String(200))
-    director = Column(String(200))
-    year = Column(Integer)
-    length_minutes = Column(Integer)
 
 if __name__ == '__main__':
     app.run(debug=True)
