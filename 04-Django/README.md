@@ -21,3 +21,13 @@ python -m venv venv
         source venv/bin/activate
     ```
 
+
+### 3. Instalacion de Django
+```bash
+pip install django
+```
+### 4. Crear un proyecto en Django
+Con este comando crearemos nuestro primer proyecto en Django
+```bash
+django-admin startproject core .
+```
