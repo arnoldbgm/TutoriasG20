@@ -51,3 +51,13 @@ INSTALLED_APPS = [
     'django.contrib.admin',
 ]
 ```
+### 8. Creacion de una aplicacion
+```
+python manage.py startapp productos
+```
+Siempre que tu crees un aplicativo en Django, este debe de ser registrado en el ``core/settings.py``📂
+```py
+INSTALLED_APPS = [
+    'nombre_aplicativo'
+]
+```
