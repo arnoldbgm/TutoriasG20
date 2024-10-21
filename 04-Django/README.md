@@ -31,3 +31,16 @@ Con este comando crearemos nuestro primer proyecto en Django
 ```bash
 django-admin startproject core .
 ```
+### 5. Como levantar mi proyecto de Django
+```bash
+python manage.py migrate
+python manage.py runserver
+```
+### 6. Crear un superusuario en Django
+```bash
+python manage.py createsuperuser
+```
+### 7. Instalacion de JAZZMINE
+```bash
+pip install -U django-jazzmin
+```
