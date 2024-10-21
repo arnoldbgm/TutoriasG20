@@ -73,3 +73,17 @@ Esto no se vera en tu base de datos hasta que tu ejecutes lo siguiente
 python manage.py makemigrations
 python manage.py migrate
 ```
+### 10. Registrar un modelo en mi admin de Django
+
+```py
+from django.contrib import admin
+from .models import CategoriasModel, ProductosModel
+
+@admin.register(CategoriasModel)
+class CategoriasAdmin(admin.ModelAdmin):
+   list_display =  ["nombre"]
+
+@admin.register(ProductosModel)
+class ProductoAdmin(admin.ModelAdmin):
+   list_display = ["titulo", "stock", "contenido"]
+```
