@@ -44,3 +44,10 @@ python manage.py createsuperuser
 ```bash
 pip install -U django-jazzmin
 ```
+En tu ``core/settings.py``📂, coloca ``jazzim`` antes del ``django.contrib.admin``
+```py
+INSTALLED_APPS = [
+    'jazzmin',
+    'django.contrib.admin',
+]
+```
