@@ -61,3 +61,15 @@ INSTALLED_APPS = [
     'nombre_aplicativo'
 ]
 ```
+### 9. Modelado de la base de datos
+![image](https://github.com/user-attachments/assets/f69a535b-f8f1-4c3b-a065-4b8f518a9f85)
+Si modelas lo siguiente
+```py
+class CategoriasModel(models.Model):
+   nombre = models.CharField(max_length=255)
+```
+Esto no se vera en tu base de datos hasta que tu ejecutes lo siguiente
+```
+python manage.py makemigrations
+python manage.py migrate
+```
