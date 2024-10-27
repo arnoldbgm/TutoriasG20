@@ -40,7 +40,7 @@ python manage.py runserver
 ```bash
 python manage.py createsuperuser
 ```
-### 7. Instalacion de JAZZMINE
+### 7. Instalacion de UNFOLD
 ```bash
 pip install django-unfold
 ```
