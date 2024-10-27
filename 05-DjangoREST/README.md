@@ -1,5 +1,5 @@
 # Primeros pasos con Django REST framework 🦾🐍
-<img src="https://github.com/user-attachments/assets/07230e79-3fdc-48bc-84f4-60e6fdd32063" alt="imagen" style="width: 200px;" />
+<img src="https://github.com/user-attachments/assets/07230e79-3fdc-48bc-84f4-60e6fdd32063" alt="imagen" style="width: 400px;" />
 
 ### 1. Crear un entorno virtual 🐍
 
