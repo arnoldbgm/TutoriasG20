@@ -47,4 +47,5 @@ INSTALLED_APPS = [
 ]
 ```
 ### 9. Modelado de la base de datos
-![image](https://github.com/user-attachments/assets/f69a535b-f8f1-4c3b-a065-4b8f518a9f85)
+
+![Bd_Django](https://github.com/user-attachments/assets/dece3017-b9dd-4a30-a953-ce5cb6ee4b93)
