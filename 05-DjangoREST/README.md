@@ -24,7 +24,7 @@ python -m venv venv
 
 ### 3. Instalacion de Django
 ```bash
-pip install django
+pip install django djangorestframework
 ```
 ### 4. Crear un proyecto en Django
 Con este comando crearemos nuestro primer proyecto en Django
@@ -43,6 +43,7 @@ python manage.py startapp productos
 Siempre que tu crees un aplicativo en Django, este debe de ser registrado en el ``core/settings.py``📂
 ```py
 INSTALLED_APPS = [
+    'rest_framework',
     'productos'
 ]
 ```
