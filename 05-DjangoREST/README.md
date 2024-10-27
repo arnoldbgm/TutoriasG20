@@ -1,5 +1,6 @@
-# Primeros pasos con Django 🦾🐍
-[<img src="https://daiderd.com/nix-darwin/images/nix-darwin.png" width="200px" alt="logo" />](https://github.com/LnL7/nix-darwin)
+# Primeros pasos con Django REST framework 🦾🐍
+<img src="https://github.com/user-attachments/assets/9a3301e5-1ff7-47a5-b391-3389bef4c2ac" alt="imagen" style="width: 200px;" />
+
 ### 1. Crear un entorno virtual 🐍
 
 ```bash
