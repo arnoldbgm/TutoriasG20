@@ -100,6 +100,7 @@ Para comenzar con la creación de nuestra Bd, es importante que tengamos instala
 
 ```bash
 npm install prisma --save-dev
+npm install @prisma/client
 ```
 
 Ahora ejecutaremos lo siguiente, para poder instalar Prisma ORM 

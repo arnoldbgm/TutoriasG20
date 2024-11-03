@@ -1,0 +1,96 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model articulos {
+  id                   Int                    @id @default(autoincrement())
+  nombre               String
+  descripcion          String
+  precio               Float
+  createdAt            DateTime               @default(now())
+  detalle_cotizaciones detalle_cotizaciones[]
+  detalle_ordenes      detalle_ordenes[]
+}
+
+model cotizaciones {
+  id                   Int                    @id @default(autoincrement())
+  numero_cotizacion    String                 @unique
+  fecha_cotizacion     DateTime               @db.Date
+  estado_cotizacion    ESTADO                 @default(PENDIENTE)
+  createdAt            DateTime               @default(now())
+  updatedAt            DateTime
+  proyecto_id          Int
+  proyectos            proyectos              @relation(fields: [proyecto_id], references: [id])
+  detalle_cotizaciones detalle_cotizaciones[]
+  oservicios           oservicios?
+}
+
+model detalle_cotizaciones {
+  id              Int          @id @default(autoincrement())
+  item            Int
+  cotizacion_id   Int
+  cantidad        Int
+  precio_unitario Float
+  articulo_id     Int
+  articulos       articulos    @relation(fields: [articulo_id], references: [id])
+  cotizaciones    cotizaciones @relation(fields: [cotizacion_id], references: [id])
+}
+
+model detalle_ordenes {
+  id              Int        @id @default(autoincrement())
+  item            Int
+  cantidad        Int
+  precio_unitario Float
+  oservicio_id    Int
+  articulo_id     Int
+  articulos       articulos  @relation(fields: [articulo_id], references: [id])
+  oservicios      oservicios @relation(fields: [oservicio_id], references: [id])
+}
+
+model empresas {
+  id                 Int         @id @default(autoincrement())
+  nombre             String
+  ruc                String
+  direccion          String
+  telefono           String
+  correo_electronico String      @unique
+  habilitado         Boolean     @default(true)
+  createdAt          DateTime    @default(now())
+  proyectos          proyectos[]
+}
+
+model oservicios {
+  id              Int               @id @default(autoincrement())
+  numero_orden    String            @unique
+  fecha_orden     DateTime          @db.Date
+  estaddo_orden   ESTADO
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime
+  cotizacion_id   Int               @unique
+  detalle_ordenes detalle_ordenes[]
+  cotizaciones    cotizaciones      @relation(fields: [cotizacion_id], references: [id])
+}
+
+model proyectos {
+  id           Int            @id @default(autoincrement())
+  nombre       String
+  descripcion  String
+  fecha_inicio DateTime       @db.Date
+  fecha_fin    DateTime?      @db.Date
+  createdAt    DateTime       @default(now())
+  empresa_id   Int
+  cotizaciones cotizaciones[]
+  empresas     empresas       @relation(fields: [empresa_id], references: [id])
+}
+
+enum ESTADO {
+  PENDIENTE
+  ACEPTADA
+  RECHAZADA
+  CANCELADA
+}
