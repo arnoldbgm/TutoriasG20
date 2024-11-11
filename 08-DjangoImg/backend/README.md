@@ -37,7 +37,7 @@ django-admin startproject core .
 python manage.py migrate
 python manage.py runserver
 ```
-### 8. Creacion de una aplicacion
+### 6. Creacion de una aplicacion
 ```
 python manage.py startapp productos
 ```
@@ -88,4 +88,15 @@ from .views import ListCategorias
 urlpatterns = [
    path('categorias/', ListCategorias.as_view())
 ]
+```
+
+### 13. Configuracion para mostrar imagenes locales en Django
+
+```py
+
+# Configuración en urls.py para servir archivos de medios en desarrollo
+from django.conf import settings
+from django.conf.urls.static import static
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 ```
