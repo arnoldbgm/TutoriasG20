@@ -5,5 +5,5 @@ interface Producto {
    rating: number;
    descripcion: string;
    imagen: string | null;
-   categorias: number;
+   categorias: number; // Llave foranea a mi tabla categorias
 }
